@@ -1,0 +1,64 @@
+/* Card Container */
+.product-card { 
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+    font-family: 'Poppins';
+    border: 2px solid gray;
+  }
+  
+  /* Hover effect */
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Styling */
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title */
+  .product-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Description */
+  .product-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+  
+  /* Price */
+  .product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 10px;
+  }
+  
+  /* Reviews */
+  .product-reviews {
+    font-size: 0.9rem;
+    color: #f39c12;
+  }
+
+  .productlist-container{
+    display: flex;
+  }
+  

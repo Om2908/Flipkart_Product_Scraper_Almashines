@@ -1,0 +1,10 @@
+.p1{
+    margin-left:40px;
+}
+
+.productlist-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 columns */
+        gap: 10px; /* Space between items */
+        padding: 20px;
+}
