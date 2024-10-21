@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Flipkart Product Price Tracker and History Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **Flipkart Product Tracker** web application that allows users to share Flipkart product links, automatically fetch and display relevant product information, and keep a **historical record of price changes**. No user login is required, and everyone can view products, search them by title or filter by price range, and track pricing history with rechecks.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 1. Product Input Interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users paste a Flipkart product link and click **"Fetch Details"** to automatically gather product information using web scraping.
+- Product data fetched includes:
+  - **Title**
+  - **Description**
+  - **Current Price**
+  - **Total Reviews**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Display Product Data
 
-### `npm test`
+- Product details are displayed clearly for users, including:
+- Title, description, price, reviews, and number of purchases.
+- Each product card shows a **"Recheck Price"** button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Price Recheck and Historical Price List
 
-### `npm run build`
+- Users can recheck the **current price** at any time by clicking the "Recheck Price" button.
+- **All previous prices are stored** and displayed chronologically in a price history table for each product.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Public Data Access
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- No user login or authentication is required—**all users can view** products and their pricing history.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend:** HTML, CSS, JavaScript, React.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (for product info and pricing history)
+- **Web Scraping:** Cheerio.js
+- **API Calls:** Axios for product data fetching and recheck requests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd flipkart-product-tracker
+   ```
