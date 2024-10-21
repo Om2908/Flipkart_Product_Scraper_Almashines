@@ -3,17 +3,22 @@ import axios from "axios";
 import "./ProductInput.css";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import { FadeLoader } from "react-spinners";
 
 const ProductInput = () => {
   const [url, setUrl] = useState("");
   const [data, setData] = useState();
+  const [spinner, setSpinner] = useState(false);
+
   const navigate = useNavigate();
   const handleAddProduct = async () => {
+    setSpinner((prev) => !prev);
     const load = await axios.post(
       "https://flipkart-product-scraper-almashines-3eia.onrender.com/api/add",
       { url }
     );
     setData(load?.data);
+    setSpinner((prev) => !prev);
     console.log(data);
   };
 
@@ -35,6 +40,7 @@ const ProductInput = () => {
         </div>
         <button
           className="btn"
+          style={{ marginRight: "30px" }}
           onClick={(e) => {
             handleAddProduct();
           }}
@@ -45,6 +51,7 @@ const ProductInput = () => {
           All Products
         </button>
       </div>
+      <div className="loader-div"><FadeLoader loading={spinner} className="loader"/></div>
       {data?.data && <ProductCard product={data?.data} />}
     </div>
   );

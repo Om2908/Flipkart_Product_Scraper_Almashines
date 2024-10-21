@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import "./ProductInput.css";
 import "./ProductCard.css"; // Import CSS
 
 const ProductCard = ({ product }) => {
+  const [toggle, setToggle] = useState(false);
+
   product.priceHistory = product.priceHistory.map((data) => {
     const ioDate = data.date;
     const date = new Date(ioDate);
@@ -31,11 +34,20 @@ const ProductCard = ({ product }) => {
       <p className="product-description">{product?.description}</p>
       <p className="product-price">₹{product?.currentPrice}</p>
       <p className="product-reviews">⭐ {product?.reviews} Reviews</p>
-      {product.priceHistory.map((data, index) => (
-        <p key={index}>
-          Date: {data.date} | Price: ₹{data.price}
-        </p>
-      ))}
+      <button
+        className="btn"
+        onClick={() => {
+          setToggle((prev) => !prev);
+        }}
+      >
+        Recheck Price
+      </button>
+      {toggle &&
+        product.priceHistory.map((data, index) => (
+          <p key={index}>
+            Date: {data.date} | Price: ₹{data.price}
+          </p>
+        ))}
     </div>
   );
 };
